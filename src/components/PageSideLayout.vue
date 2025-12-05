@@ -1,6 +1,6 @@
 <template>
     <div class="PageSideLayout w-full h-full flex">
-        <div class="PageSideLayout-Side w-[220px]">
+        <div v-if="$slots.side" class="PageSideLayout-Side w-[220px]">
           <slot name="side" />
         </div>
 

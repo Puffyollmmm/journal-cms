@@ -1,38 +1,32 @@
 <script setup>
-import Sidebar from '@/components/Sidebar.vue';
+// import Sidebar from '@/components/Sidebar.vue';
 import PageSideLayout from '@/components/PageSideLayout.vue';
 </script>
 
 <template>
     <page-side-layout>
-        <template #side>
-            <Sidebar />
-        </template>
-
         <template #background>
             <div class="Background-img"></div>
         </template>
 
-        <div class="Content flex">
-            <div class="Content-search-box">
-                <img class="search-icon" src="@/assets/CarbonSearch.png" alt="">
-                <input type="search" placeholder="Feeling like going anywhere?">
-            </div>
+        <div class="Content pt-[88px] px-4 flex">
             <div class="Content-first">
-                <div class="Content-first-title">Gallery</div>
-                <div class="Content-first-image">
-                    <img src="@/assets/Gallery/5.png" alt="">
-                    <img src="@/assets/Gallery/4.png" alt="">
-                    <img src="@/assets/Gallery/3.png" alt="">
-                    <img src="@/assets/Gallery/2.png" alt="">
-                    <img src="@/assets/Gallery/1.png" alt="">
-                    <img src="@/assets/Gallery/1.png" alt="">
-                    <img src="@/assets/Gallery/2.png" alt="">
-                    <img src="@/assets/Gallery/2.png" alt="">
+                <div class="Content-first-title my-2">Gallery</div>
+                <div class="Content-first-container">
+                    <div class="Content-first-image">
+                        <img src="@/assets/Gallery/5.png" alt="">
+                        <img src="@/assets/Gallery/4.png" alt="">
+                        <img src="@/assets/Gallery/3.png" alt="">
+                        <img src="@/assets/Gallery/2.png" alt="">
+                        <img src="@/assets/Gallery/1.png" alt="">
+                        <img src="@/assets/Gallery/1.png" alt="">
+                        <img src="@/assets/Gallery/2.png" alt="">
+                        <img src="@/assets/Gallery/2.png" alt="">
+                    </div>
                 </div>
             </div>
             <div class="Content-second">
-                <div class="Content-second-title">
+                <div class="Content-second-title my-2">
                     <span>
                         Recommend
                     </span>
@@ -41,12 +35,13 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
                     </div>
                 </div>
                 <div class="Content-recommend-box">
-                    <div class="recommend-scroll">
+                    <div class="Content-recommend-container">
+                        <div class="recommend-scroll">
                         <div class="Content-recommend">
                             <img src="@/assets/Recommend/1.png" alt="">
                             <div class="Content-recommend-item">
                                 <div class="Content-recommend-item-name">
-                                    <span>都江堰景区</span>
+                                    <h3>都江堰景区</h3>
                                     <span>四川成都</span>
                                 </div>
                                 <span class="Content-recommend-item-distance">
@@ -58,7 +53,7 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
                             <img src="@/assets/Recommend/2.png" alt="">
                             <div class="Content-recommend-item">
                                 <div class="Content-recommend-item-name">
-                                    <span>青城山景区</span>
+                                    <h3>青城山景区</h3>
                                     <span>四川成都</span>
                                 </div>
                                 <span class="Content-recommend-item-distance">
@@ -70,7 +65,7 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
                             <img src="@/assets/Recommend/3.png" alt="">
                             <div class="Content-recommend-item">
                                 <div class="Content-recommend-item-name">
-                                    <span>九寨沟</span>
+                                    <h3>九寨沟</h3>
                                     <span>四川阿坝州</span>
                                 </div>
                                 <span class="Content-recommend-item-distance">
@@ -82,7 +77,7 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
                             <img src="@/assets/Recommend/4.png" alt="">
                             <div class="Content-recommend-item">
                                 <div class="Content-recommend-item-name">
-                                    <span>黄龙九寨</span>
+                                    <h3>黄龙九寨</h3>
                                     <span>四川阿坝州</span>
                                 </div>
                                 <span class="Content-recommend-item-distance">
@@ -91,12 +86,12 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
     </page-side-layout>
 </template>
-
 
 <style scoped>
 .Background-img {
@@ -112,14 +107,16 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
 }
 
 .Content {
-    /* position: fixed; */
+    position: relative;
+
     top: 0;
-    left: 13%;
-    width: 87%;
+    left: 0%;
+    width: 100%;
     height: 100%;
+
+    gap: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -162,10 +159,12 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+
+    overflow: hidden;
 }
 
 .Content-first-title {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
     color: #000;
     letter-spacing: 0px;
@@ -174,30 +173,53 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
 }
 
 .Content-first-image {
+    position: relative;
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 10px;
-    margin-left: 20px;
     width: 100%;
     flex-wrap: nowrap;
     overflow-x: auto;
 
-    padding: 18px 20px 18px 20px;
-    border-radius: 18px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 28px;
     border: 1px solid rgba(239, 239, 239, 1);
     gap: 5px;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+}
 
+.Content-first-container {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+    border-radius: 28px;
     background: rgba(255, 255, 255, 0.5);
+}
+
+
+.Content-first-container::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 20px;
+    height: 100%;
+
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.75) 20%, #00000000);
 }
 
 .Content-first-image img {
     border-radius: 28px;
-    border: 1px solid rgba(239, 239, 239, 1);
+    border: 1px solid rgba(239, 239, 239, 0.5);
     opacity: 1;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.125);
 }
 
 /* .Content-first-image::-webkit-scrollbar {
@@ -233,7 +255,7 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
 }
 
 .Content-second-title span {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
     color: #000;
     padding: 0 20px;
@@ -260,23 +282,40 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* width: calc(100% - 30px); */
-    margin-top: 10px;
-    margin-left: 20px;
     flex-wrap: nowrap;
 
-    padding: 16px 20px;
-    border-radius: 18px;
-    border: 1px solid rgba(239, 239, 239, 1);
-    width: 97%;
-    gap: 12px;
+    border-radius: 28px;
+    width: 100%;
 
     background: rgba(255, 255, 255, 0.5);
 
-    overflow-x: hidden;
-
+    overflow: hidden;
     scrollbar-gutter: stable both-edges;
 }
+
+.Content-recommend-container {
+    position: relative;
+    display: flex;
+
+    width: 100%;
+
+    flex-direction: column;
+}
+
+.Content-recommend-container::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 20px;
+
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75) 20%, #00000000);
+}
+
 
 .Content-recommend {
     display: flex;
@@ -284,9 +323,10 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     align-items: center;
     width: 100%;
     height: 90px;
+    color: #000;
     padding: 0 10px;
-    border-radius: 18px;
-    background-color: #ffffff;
+    border-radius: 28px;
+    background-color: #ffffffA0;
 
     margin: 0px 0px 10px 0px;
     gap: 16px;
@@ -298,6 +338,8 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
+
+    padding: 1rem 0.5rem;
 }
 
 .Content-recommend-item {

@@ -135,6 +135,15 @@
   background-color: #efefef50;
 }
 
+.LoginPage-MainContentFooter button {
+  &:hover {
+    opacity: 0.95;
+  }
+
+  cursor: pointer;
+  user-select: none;
+}
+
 @media screen and (min-width:1200px) {
   .LoginPage-Main {
     width: 820px;

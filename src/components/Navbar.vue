@@ -1,7 +1,7 @@
 <script setup>
 import { computed, reactive } from "vue";
 import Signin from "./button/Signin.vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const navs = reactive([
   {
@@ -23,9 +23,10 @@ const navs = reactive([
 ]);
 
 const route = useRoute()
+const router = useRouter()
 
 function handleClick(route) {
-  console.log("push to routes", route);
+  router.push(route)
 }
 
 const shrink = computed(() => route.path === '/login')
@@ -43,7 +44,11 @@ const shrink = computed(() => route.path === '/login')
         {{ nav.label }}
       </div>
 
-      <div class="navbar-action pl-4 relative">
+      <div class="w-8 ml-2 h-8 flex items-center justify-center bg-black rounded-full">
+        <img class="invert-100" src="https://api.iconify.design/carbon:search.svg" alt="Search" />
+      </div>
+
+      <div class="navbar-action flex items-center pl-4 relative">
         <div class="w-px left-0 h-[80%] top-[10%] bg-black op-50 rounded-2xl absolute" />
         <Signin />
       </div>
@@ -65,7 +70,7 @@ const shrink = computed(() => route.path === '/login')
 }
 
 .navbar.shrink .navbar-action {
-  margin-right: -90px;
+  margin-right: -100px;
 
   opacity: 0;
   pointer-events: none;

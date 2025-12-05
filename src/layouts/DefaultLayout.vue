@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar.vue';
     <div class="top-[2.5%] sticky z-10">
       <Navbar />
     </div>
-    <div class="default-layout-content">
+    <div class="default-layout-content flex-1">
       <slot />
     </div>
   </div>
