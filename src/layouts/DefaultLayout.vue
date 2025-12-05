@@ -1,6 +1,9 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>
 
 <template>
@@ -11,7 +14,7 @@ import Footer from '@/components/Footer.vue';
     <div class="default-layout-content overflow-y-scroll flex-1">
       <slot />
 
-      <Footer />
+      <Footer v-if="!route.meta?.fullscreen" />
     </div>
   </div>
 </template>
