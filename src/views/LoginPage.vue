@@ -134,4 +134,16 @@
   border-radius: 22px;
   background-color: #efefef50;
 }
+
+@media screen and (min-width:1024px) {
+  .LoginPage-Main {
+    width: 820px;
+    height: 560px;
+  }
+
+  .LoginPage-MainContent-Title {
+    margin-top: 0.5rem;
+    font-size: 36px;
+  }
+}
 </style>
