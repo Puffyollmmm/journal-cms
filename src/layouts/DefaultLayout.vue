@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 </script>
 
 <template>
@@ -7,8 +8,10 @@ import Navbar from '@/components/Navbar.vue';
     <div class="top-[2.5%] sticky z-10">
       <Navbar />
     </div>
-    <div class="default-layout-content flex-1">
+    <div class="default-layout-content overflow-y-scroll flex-1">
       <slot />
+
+      <Footer />
     </div>
   </div>
 </template>

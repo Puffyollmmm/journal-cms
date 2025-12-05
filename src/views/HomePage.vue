@@ -6,11 +6,13 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
 <template>
     <page-side-layout>
         <template #background>
-            <div class="Background-img"></div>
+            <div class="Background-Main">
+                <div class="Background-img" />
+            </div>
         </template>
 
-        <div class="Content pt-[88px] px-4 flex">
-            <div class="Content-first">
+        <div class="Content pt-[158px] px-4">
+            <div class="Content-first my-4">
                 <div class="Content-first-title my-2">Gallery</div>
                 <div class="Content-first-container">
                     <div class="Content-first-image">
@@ -25,7 +27,7 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
                     </div>
                 </div>
             </div>
-            <div class="Content-second">
+            <div class="Content-second my-4">
                 <div class="Content-second-title my-2">
                     <span>
                         Recommend
@@ -94,16 +96,29 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
 </template>
 
 <style scoped>
-.Background-img {
+.Background-Main {
     position: absolute;
 
     inset: 0;
 
-    background-image: url('@/assets/HomePage.png');
+    background-color: #efefef;
+}
+
+.Background-img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50%;
+
+    background-image: url('@/assets/background/holder.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(12px);
+
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, #00000000 100%);
 }
 
 .Content {
@@ -115,9 +130,8 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     height: 100%;
 
     gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    overflow-y: auto;
 }
 
 .Content-search-box {
@@ -188,6 +202,9 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     gap: 5px;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+
+    border-radius: 28px;
+    backdrop-filter: blur(18px) saturate(180%);
 }
 
 .Content-first-container {
@@ -276,8 +293,6 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
 }
 
 .Content-recommend-box {
-    opacity: 1;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -290,7 +305,9 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     background: rgba(255, 255, 255, 0.5);
 
     overflow: hidden;
-    scrollbar-gutter: stable both-edges;
+
+    border-radius: 28px;
+    backdrop-filter: blur(18px) saturate(180%);
 }
 
 .Content-recommend-container {
@@ -333,10 +350,8 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
 }
 
 .recommend-scroll {
-    max-height: 260px;
-    /* 你想要的可视高度 */
+    max-height: 340px;
     overflow-y: auto;
-    overflow-x: hidden;
     width: 100%;
 
     padding: 1rem 0.5rem;
@@ -347,7 +362,6 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
 }
 
 .Content-recommend-item-name {
@@ -364,53 +378,5 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     font-weight: medium;
     color: #000;
     padding: 0 25px;
-}
-
-/* .recommend-scroll::-webkit-scrollbar {
-    width: 4px;
-}
-
-.recommend-scroll::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.recommend-scroll::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.18);
-    border-radius: 10px;
-}
-
-.recommend-scroll::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,0.30);
-} */
-
-/* ========== 全局滑动条（深色简洁风） ========== */
-
-/* 横向/纵向通用滚动条宽度 */
-.Content-first-image::-webkit-scrollbar,
-.recommend-scroll::-webkit-scrollbar {
-    width: 6px;
-    /* 纵向 */
-    height: 6px;
-    /* 横向 */
-}
-
-/* 滚动条轨道背景 */
-.Content-first-image::-webkit-scrollbar-track,
-.recommend-scroll::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* 滚动条滑块 */
-.Content-first-image::-webkit-scrollbar-thumb,
-.recommend-scroll::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.35);
-    /* 深色 */
-    border-radius: 8px;
-}
-
-/* 滑块 hover 更深一点 */
-.Content-first-image::-webkit-scrollbar-thumb:hover,
-.recommend-scroll::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.55);
 }
 </style>
