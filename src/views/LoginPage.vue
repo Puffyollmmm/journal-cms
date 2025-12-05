@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <div class="LoginPage absolute inset-0">
     <div class="LoginPage-Background absolute inset-0 -z-1">
@@ -8,7 +5,7 @@
     </div>
 
     <div
-      class="LoginPage-Main flex gap-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      class="LoginPage-Main flex gap-8 absolute top-1/2 left-1/2"
     >
       <div class="LoginPage-MainAside flex-1">
         <div class="LoginPage-MainAside-Content" />
@@ -47,6 +44,18 @@
 </template>
 
 <style scoped>
+@keyframes main-enter {
+  from {
+    filter: blur(10px);
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+
+  to {
+    filter: blur(0);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .LoginPage-MainContent-Title::before {
   z-index: -1;
   content: "";
@@ -113,6 +122,10 @@
   border: 1px solid #afafaf;
   background-color: #efefef10;
   backdrop-filter: blur(18px) saturate(180%);
+
+  filter: blur(10px);
+  transform: translate(-50%, -50%) scale(1.25);
+  animation: main-enter .75s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .LoginPage-MainAside {

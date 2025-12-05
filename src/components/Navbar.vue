@@ -52,8 +52,20 @@ const shrink = computed(() => route.path === '/login')
 </template>
 
 <style scoped>
+@keyframes navbar-enter {
+  from {
+    filter: blur(10px);
+    transform: translateX(-50%) translateY(-300%);
+  }
+
+  to {
+    filter: blur(0);
+    transform: translateX(-50%) translateY(0%);
+  }
+}
+
 .navbar.shrink .navbar-action {
-  margin-right: -100px;
+  margin-right: -90px;
 
   opacity: 0;
   pointer-events: none;
@@ -83,8 +95,10 @@ const shrink = computed(() => route.path === '/login')
   max-width: 720px;
 
   overflow: hidden;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-300%);
   backdrop-filter: blur(18px);
+
+  animation: navbar-enter .75s 0.25s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 .navbar-sub {
