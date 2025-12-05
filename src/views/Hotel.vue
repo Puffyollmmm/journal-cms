@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 </script>
 
@@ -9,7 +9,8 @@ import { ref } from 'vue'
         <div class="IndexPage-Left">
             <div class="IndexPage-Left-Title">发现你的下一个港湾</div>
             <div class="IndexPage-Left-Description">Discover Your<br>Next Haven</div>
-            <div class="IndexPage-Left-Content">Book incredible hotels and resorts at unbeatable prices.Your dream vacation is just a few clicks away.</div>
+            <div class="IndexPage-Left-Content">Book incredible hotels and resorts at unbeatable prices.Your dream
+                vacation is just a few clicks away.</div>
             <div class="IndexPage-Left-Search">
                 <div>了解更多...</div>
                 <button>搜索</button>
@@ -21,9 +22,7 @@ import { ref } from 'vue'
                     <img src="@/assets/3.png" alt="">
                     <img src="@/assets/4.png" alt="">
                 </div>
-                <div class="IndexPage-button">
-                    <img src="@/assets/CarbonChevronRight.png" alt="">
-                </div>
+                <button>更多酒店</button>
             </div>
         </div>
         <div class="IndexPage-Right">
@@ -76,11 +75,12 @@ import { ref } from 'vue'
 </template>
 
 <style scoped>
-.IndexPage{
+.IndexPage {
     width: 100%;
     height: 100vh;
 }
-.IndexPage-Background{
+
+.IndexPage-Background {
     z-index: -1;
     position: absolute;
 
@@ -96,9 +96,9 @@ import { ref } from 'vue'
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('@/assets/Hotel/7.png');
-    }
+}
 
-.IndexPage-Left{
+.IndexPage-Left {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -110,13 +110,14 @@ import { ref } from 'vue'
     width: 27%;
 }
 
-.IndexPage-Left-Title{
+.IndexPage-Left-Title {
     font-size: 40px;
     font-weight: 600;
     color: #ffffff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
 }
 
-.IndexPage-Left-Description{
+.IndexPage-Left-Description {
     font-size: 64px;
     font-weight: 700;
     letter-spacing: 0px;
@@ -132,13 +133,13 @@ import { ref } from 'vue'
     display: inline-block;
 }
 
-.IndexPage-Left-Content{
+.IndexPage-Left-Content {
     font-size: 20px;
     font-weight: 400;
     color: #ffffff;
 }
 
-.IndexPage-Left-Search{
+.IndexPage-Left-Search {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,7 +151,7 @@ import { ref } from 'vue'
     backdrop-filter: blur(18px);
 }
 
-.IndexPage-Left-Search div{
+.IndexPage-Left-Search div {
     font-size: 18px;
     font-weight: 400;
     color: #000000;
@@ -159,7 +160,7 @@ import { ref } from 'vue'
     justify-content: center;
 }
 
-.IndexPage-Left-Search button{
+.IndexPage-Left-Search button {
     font-size: 20px;
     font-weight: medium;
     background-color: rgba(255, 255, 255, 0.5);
@@ -168,41 +169,52 @@ import { ref } from 'vue'
     border: none;
 }
 
-.IndexPage-Left-Image{
+.IndexPage-Left-Image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 22px;
-    padding:4px;
     width: 100%;
-    gap: 18px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     backdrop-filter: blur(18px);
+
+    gap: 8px;
+    padding: 6px 8px;
+    margin: 5px 0px;
 }
 
-.IndexPage-Left-Image-Item{
+.IndexPage-Left-Image button{
+    font-size: 14px;
+    font-weight: medium;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 18px;
+    padding: 18px 8px;
+    border: none;
+    white-space: nowrap;
+}
+
+.IndexPage-Left-Image-Item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* gap: 2px; */
+    gap: 5px;
 }
 
-.IndexPage-Left-Image img{
-    justify-content: flex-start;
-    padding: 3px;
+.IndexPage-Left-Image img {
+    object-fit: cover;
 }
 
-.IndexPage-Right{
+.IndexPage-Right {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     top: 10%;
-    right: 5%;
+    right: 8%;
 }
 
-.IndexPage-First{
+.IndexPage-First {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,10 +224,10 @@ import { ref } from 'vue'
     border-radius: 22px;
     padding: 15px;
     backdrop-filter: blur(18px);
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-.IndexPage-First button{
+.IndexPage-First button {
     font-size: 20px;
     font-weight: medium;
     background-color: rgba(0, 186, 171, 1);
@@ -226,7 +238,7 @@ import { ref } from 'vue'
     margin: 8px 0px 0px 0px;
 }
 
-.IndexPage-First-Title{
+.IndexPage-First-Title {
     font-size: 28px;
     font-weight: 500;
     color: #212121;
@@ -234,34 +246,34 @@ import { ref } from 'vue'
     align-items: flex-start;
 }
 
-.IndexPage-First-Hotel{
+.IndexPage-First-Hotel {
     width: 98%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.IndexPage-First-Hotel > span{
+.IndexPage-First-Hotel>span {
     font-size: 16px;
     color: rgba(0, 186, 171, 1);
     opacity: 0.9;
     align-items: flex-start;
 }
 
-.IndexPage-First-Score{
+.IndexPage-First-Score {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.IndexPage-First-Country{
+.IndexPage-First-Country {
     font-size: 18px;
     font-weight: 400;
-    color:rgba(0, 186, 171, 1);
+    color: rgba(0, 186, 171, 1);
     margin: 2px 0px;
 }
 
-.IndexPage-First-Date{
+.IndexPage-First-Date {
     font-size: 18px;
     font-weight: 400;
     color: #000000;
@@ -273,14 +285,14 @@ import { ref } from 'vue'
     width: 100%;
 }
 
-.IndexPage-First-score{
+.IndexPage-First-score {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-.IndexPage-First-Image{
+.IndexPage-First-Image {
     width: 300px;
     height: 160px;
     border-radius: 10px;
@@ -289,14 +301,14 @@ import { ref } from 'vue'
     margin: 12px 0px;
 }
 
-.IndexPage-First-Image img{
+.IndexPage-First-Image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 
-.IndexPage-Second{
+.IndexPage-Second {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -308,41 +320,41 @@ import { ref } from 'vue'
     backdrop-filter: blur(18px);
 }
 
-.IndexPage-Second-Title{
+.IndexPage-Second-Title {
     background-color: #ffffff;
     padding: 2px 16px;
     font-size: 20px;
     font-weight: 500;
     font-family: '微软雅黑';
-    color:rgba(56, 56, 56, 1);
+    color: rgba(56, 56, 56, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.IndexPage-Second-Price{
+.IndexPage-Second-Price {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.IndexPage-Second-Price span{
+.IndexPage-Second-Price span {
     font-size: 28px;
     font-weight: 550;
     color: rgba(0, 186, 171, 1);
 }
 
-.IndexPage-Second-Item{
+.IndexPage-Second-Item {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    padding: 15px 18px;
+    padding: 30px 18px;
 }
 
-.IndexPage-button{
+.IndexPage-button {
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -352,10 +364,8 @@ import { ref } from 'vue'
     cursor: pointer;
 }
 
-.IndexPage-button img{
+.IndexPage-button img {
     width: 24px;
     height: 24px;
 }
 </style>
-
-

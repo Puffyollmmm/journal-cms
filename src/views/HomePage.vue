@@ -1,147 +1,109 @@
 <script setup>
 import Sidebar from '@/components/Sidebar.vue';
-
+import PageSideLayout from '@/components/PageSideLayout.vue';
 </script>
 
 <template>
-    <div class="Background">
-        <div class="Background-mask-left"></div>
-        <div class="Background-mask-right"></div>
-        <div class="Background-img"></div>
-    </div>
-    <Sidebar />
-    <div class="Content">
-        <div class="Content-search-box">
-            <img class="search-icon" src="@/assets/CarbonSearch.png" alt="">
-            <input type="search" placeholder="Feeling like going anywhere?">
-        </div>
-        <div class="Content-first">
-            <div class="Content-first-title">Gallery</div>
-            <div class="Content-first-image">
-                <img src="@/assets/Gallery/5.png" alt="">
-                <img src="@/assets/Gallery/4.png" alt="">
-                <img src="@/assets/Gallery/3.png" alt="">
-                <img src="@/assets/Gallery/2.png" alt="">
-                <img src="@/assets/Gallery/1.png" alt="">
-                <img src="@/assets/Gallery/1.png" alt="">
-                <img src="@/assets/Gallery/2.png" alt="">
-                <img src="@/assets/Gallery/2.png" alt="">
+    <page-side-layout>
+        <template #side>
+            <Sidebar />
+        </template>
+
+        <template #background>
+            <div class="Background-img"></div>
+        </template>
+
+        <div class="Content flex">
+            <div class="Content-search-box">
+                <img class="search-icon" src="@/assets/CarbonSearch.png" alt="">
+                <input type="search" placeholder="Feeling like going anywhere?">
             </div>
-        </div>
-        <div class="Content-second">
-            <div class="Content-second-title">
-                <span>
-                Recommend
-                </span>
-                <div class="Content-second-logo">
-                    Based on your location
+            <div class="Content-first">
+                <div class="Content-first-title">Gallery</div>
+                <div class="Content-first-image">
+                    <img src="@/assets/Gallery/5.png" alt="">
+                    <img src="@/assets/Gallery/4.png" alt="">
+                    <img src="@/assets/Gallery/3.png" alt="">
+                    <img src="@/assets/Gallery/2.png" alt="">
+                    <img src="@/assets/Gallery/1.png" alt="">
+                    <img src="@/assets/Gallery/1.png" alt="">
+                    <img src="@/assets/Gallery/2.png" alt="">
+                    <img src="@/assets/Gallery/2.png" alt="">
                 </div>
             </div>
-            <div class="Content-recommend-box">
-                <div class="recommend-scroll">
-                    <div class="Content-recommend">
-                        <img src="@/assets/Recommend/1.png" alt="">
-                        <div class="Content-recommend-item">
-                            <div class="Content-recommend-item-name">
-                                <span>都江堰景区</span>
-                                <span>四川成都</span>
-                            </div>
-                            <span class="Content-recommend-item-distance">
-                                3.5km
-                            </span>
-                        </div>
+            <div class="Content-second">
+                <div class="Content-second-title">
+                    <span>
+                        Recommend
+                    </span>
+                    <div class="Content-second-logo">
+                        Based on your location
                     </div>
-                    <div class="Content-recommend">
-                        <img src="@/assets/Recommend/2.png" alt="">
-                        <div class="Content-recommend-item">
-                            <div class="Content-recommend-item-name">
-                                <span>青城山景区</span>
-                                <span>四川成都</span>
+                </div>
+                <div class="Content-recommend-box">
+                    <div class="recommend-scroll">
+                        <div class="Content-recommend">
+                            <img src="@/assets/Recommend/1.png" alt="">
+                            <div class="Content-recommend-item">
+                                <div class="Content-recommend-item-name">
+                                    <span>都江堰景区</span>
+                                    <span>四川成都</span>
+                                </div>
+                                <span class="Content-recommend-item-distance">
+                                    3.5km
+                                </span>
                             </div>
-                            <span class="Content-recommend-item-distance">
-                                9.5km
-                            </span>
                         </div>
-                    </div>
-                    <div class="Content-recommend">
-                        <img src="@/assets/Recommend/3.png" alt="">
-                        <div class="Content-recommend-item">
-                            <div class="Content-recommend-item-name">
-                                <span>九寨沟</span>
-                                <span>四川阿坝州</span>
+                        <div class="Content-recommend">
+                            <img src="@/assets/Recommend/2.png" alt="">
+                            <div class="Content-recommend-item">
+                                <div class="Content-recommend-item-name">
+                                    <span>青城山景区</span>
+                                    <span>四川成都</span>
+                                </div>
+                                <span class="Content-recommend-item-distance">
+                                    9.5km
+                                </span>
                             </div>
-                            <span class="Content-recommend-item-distance">
-                                35km
-                            </span>
                         </div>
-                    </div>
-                    <div class="Content-recommend">
-                        <img src="@/assets/Recommend/4.png" alt="">
-                        <div class="Content-recommend-item">
-                            <div class="Content-recommend-item-name">
-                                <span>黄龙九寨</span>
-                                <span>四川阿坝州</span>
+                        <div class="Content-recommend">
+                            <img src="@/assets/Recommend/3.png" alt="">
+                            <div class="Content-recommend-item">
+                                <div class="Content-recommend-item-name">
+                                    <span>九寨沟</span>
+                                    <span>四川阿坝州</span>
+                                </div>
+                                <span class="Content-recommend-item-distance">
+                                    35km
+                                </span>
                             </div>
-                            <span class="Content-recommend-item-distance">
-                                55km
-                            </span>
+                        </div>
+                        <div class="Content-recommend">
+                            <img src="@/assets/Recommend/4.png" alt="">
+                            <div class="Content-recommend-item">
+                                <div class="Content-recommend-item-name">
+                                    <span>黄龙九寨</span>
+                                    <span>四川阿坝州</span>
+                                </div>
+                                <span class="Content-recommend-item-distance">
+                                    55km
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </page-side-layout>
 </template>
 
 
 <style scoped>
-.Background{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-.Background-mask-left{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 13%;
-    height: 100%;
-    background-color: #ffffff;
-    opacity: 0.4;
-    backdrop-filter: blur(18px);
-}
-
-.Background-mask-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 87%;
-    height: 100%;
-    background-color: #efefef;
-    opacity: 0.5;
-    backdrop-filter: blur(18px);
-}
-
 .Background-img {
-
-    z-index: -1;
     position: absolute;
 
-    top: 0;
-    left: 50%;
+    inset: 0;
 
-    width: 100%;
-    height: 100%;
-
-    transform: translateX(-50%);
-
-    width: 100%;
-    height: 100%;
     background-image: url('@/assets/HomePage.png');
     background-size: cover;
     background-position: center;
@@ -149,8 +111,8 @@ import Sidebar from '@/components/Sidebar.vue';
     filter: blur(12px);
 }
 
-.Content{
-    position: fixed;
+.Content {
+    /* position: fixed; */
     top: 0;
     left: 13%;
     width: 87%;
@@ -161,7 +123,7 @@ import Sidebar from '@/components/Sidebar.vue';
     align-items: center;
 }
 
-.Content-search-box{
+.Content-search-box {
     margin-top: 20px;
     position: relative;
     width: 100%;
@@ -170,7 +132,7 @@ import Sidebar from '@/components/Sidebar.vue';
     align-items: center;
 }
 
-.Content-search-box input{
+.Content-search-box input {
     width: 95%;
     margin: 0px 5px;
     height: 36px;
@@ -184,7 +146,7 @@ import Sidebar from '@/components/Sidebar.vue';
     background-color: #ffffff;
 }
 
-.search-icon{
+.search-icon {
     position: absolute;
     left: calc(50% - 47.5% + 18px);
     transform: translateY(-50%);
@@ -194,7 +156,7 @@ import Sidebar from '@/components/Sidebar.vue';
     top: 48%;
 }
 
-.Content-first{
+.Content-first {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,7 +164,7 @@ import Sidebar from '@/components/Sidebar.vue';
     width: 100%;
 }
 
-.Content-first-title{
+.Content-first-title {
     font-size: 20px;
     font-weight: 600;
     color: #000;
@@ -211,7 +173,7 @@ import Sidebar from '@/components/Sidebar.vue';
     padding: 0 20px;
 }
 
-.Content-first-image{
+.Content-first-image {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -226,16 +188,16 @@ import Sidebar from '@/components/Sidebar.vue';
     border: 1px solid rgba(239, 239, 239, 1);
     gap: 5px;
     scrollbar-width: thin;
-    scrollbar-color: rgba(0,0,0,0.25) transparent;
+    scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
 
     background: rgba(255, 255, 255, 0.5);
 }
 
-.Content-first-image img{
+.Content-first-image img {
     border-radius: 28px;
     border: 1px solid rgba(239, 239, 239, 1);
     opacity: 1;
-    box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 /* .Content-first-image::-webkit-scrollbar {
@@ -255,7 +217,7 @@ import Sidebar from '@/components/Sidebar.vue';
     background: rgba(0,0,0,0.35);
 } */
 
-.Content-second{
+.Content-second {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -263,14 +225,14 @@ import Sidebar from '@/components/Sidebar.vue';
     width: 100%;
 }
 
-.Content-second-title{
+.Content-second-title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
 }
 
-.Content-second-title span{
+.Content-second-title span {
     font-size: 20px;
     font-weight: 600;
     color: #000;
@@ -279,7 +241,7 @@ import Sidebar from '@/components/Sidebar.vue';
     line-height: 26.52px;
 }
 
-.Content-second-logo{
+.Content-second-logo {
     height: 20px;
     font-size: 10px;
     font-weight: medium;
@@ -291,12 +253,12 @@ import Sidebar from '@/components/Sidebar.vue';
     border-radius: 8px;
 }
 
-.Content-recommend-box{
+.Content-recommend-box {
     opacity: 1;
 
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     /* width: calc(100% - 30px); */
     margin-top: 10px;
@@ -316,7 +278,7 @@ import Sidebar from '@/components/Sidebar.vue';
     scrollbar-gutter: stable both-edges;
 }
 
-.Content-recommend{
+.Content-recommend {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -331,20 +293,22 @@ import Sidebar from '@/components/Sidebar.vue';
 }
 
 .recommend-scroll {
-    max-height: 260px;   /* 你想要的可视高度 */
+    max-height: 260px;
+    /* 你想要的可视高度 */
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
 }
 
-.Content-recommend-item{
+.Content-recommend-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
 }
-.Content-recommend-item-name{
+
+.Content-recommend-item-name {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -353,7 +317,7 @@ import Sidebar from '@/components/Sidebar.vue';
     height: 100%;
 }
 
-.Content-recommend-item-distance{
+.Content-recommend-item-distance {
     font-size: 16px;
     font-weight: medium;
     color: #000;
@@ -382,8 +346,10 @@ import Sidebar from '@/components/Sidebar.vue';
 /* 横向/纵向通用滚动条宽度 */
 .Content-first-image::-webkit-scrollbar,
 .recommend-scroll::-webkit-scrollbar {
-    width: 6px;      /* 纵向 */
-    height: 6px;     /* 横向 */
+    width: 6px;
+    /* 纵向 */
+    height: 6px;
+    /* 横向 */
 }
 
 /* 滚动条轨道背景 */
@@ -395,7 +361,8 @@ import Sidebar from '@/components/Sidebar.vue';
 /* 滚动条滑块 */
 .Content-first-image::-webkit-scrollbar-thumb,
 .recommend-scroll::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.35);   /* 深色 */
+    background: rgba(0, 0, 0, 0.35);
+    /* 深色 */
     border-radius: 8px;
 }
 

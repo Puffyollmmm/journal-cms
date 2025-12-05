@@ -1,46 +1,11 @@
 <script setup>
-import { ref } from 'vue'
-
-function handleHomeClick(){
-  console.log('Home Clicked')
-}
-
-function handleRoutesClick(){
-  console.log('Routes Clicked')
-}
-
-function handlePricingClick(){
-  console.log('Pricing Clicked')
-}
-
-function handleAboutClick(){
-  console.log('About Clicked')
-}
-
-
-
+import Navbar from '@/components/Navbar.vue'
 </script>
 
 <template>
   <div class="HomeView">
     <div class="HomeView-Background"></div>
-    <div class="navbar">
-      <div class="navbar-item">Journal</div>
-      <div class="navbar-sub">
-        <div class="navbar-item" @click="handleHomeClick">
-          Home
-        </div>
-        <div class="navbar-item" @click="handleRoutesClick">
-          Routes
-        </div>
-        <div class="navbar-item" @click="handlePricingClick">
-          Pricing
-        </div>
-        <div class="navbar-item" @click="handleAboutClick">
-          About
-        </div>
-      </div>
-    </div>
+    <Navbar />
     <div class="title">
       <div>Explore Your<br>Favorite Journey</div>
     </div>
@@ -77,42 +42,6 @@ function handleAboutClick(){
   background-repeat: no-repeat;
   background-image: url('@/assets/Guidance-Background.png'), linear-gradient(to bottom, #018DCE 0%, #027EB4 100%);
 }
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0.5rem 1rem;
-  border-radius: 28px;
-  position: absolute;
-  background-color: #FFFFFFA0;
-  margin: 0;
-
-  top: 20px;
-  left: 50%;
-
-  transform: translateX(-50%);
-  width: 60%;
-
-  backdrop-filter: blur(18px);
-}
-
-.navbar-sub {
-  display: flex;
-
-  gap: 1rem;
-  align-items: center;
-}
-
-.navbar-item {
-  font-size: 18px;
-  font-weight: medium;
-  color: #111111;
-  cursor: pointer;
-}
-
-
 
 .title {
   text-align: center;

@@ -1,46 +1,97 @@
-<script lang="js">
-
-</script>
+<script lang="js"></script>
 
 <template>
-    <div class="SidebarLayout">
-        <div class="SidebarLayout-title">TravelRoute</div>
-        <div class="SidebarLayout-content">
-            <div class="SidebarLayout-item" id="SidebarLayout-item">
-                <div class="icon-wrapper">
-                    <img class="white-icon" src="@/assets/CarbonHome.png" alt="">
-                </div>
-                <span>Dashboard</span>
-            </div>
-            <div class="SidebarLayout-item">
-                <div class="icon-wrapper">
-                    <img src="@/assets/CarbonHome.png" alt="">
-                </div>
-                <span>Routes</span>
-            </div>
-            <div class="SidebarLayout-item">
-                <div class="icon-wrapper">
-                    <img src="@/assets/CarbonHome.png" alt="">
-                </div>
-                <span>Plans</span>
-            </div>
-            <div class="SidebarLayout-item">
-                <div class="icon-wrapper">
-                    <img src="@/assets/CarbonHome.png" alt="">
-                </div>
-                <span>Settings</span>
-            </div>
-        </div>
-        <div class="SidebarLayout-bottom">
-            <img class="user" src="@/assets/user.png" alt="">
-            <span>门门满分</span>
-            <img class="icon" src="@/assets/CarbonOverflowMenuVertical.png" alt="">
-        </div>
+  <div class="SidebarLayout w-full h-full flex flex-col py-2 px-2 gap-4">
+    <div class="SidebarLayout-Title">
+      <h1 class="text-center">TravelRoute</h1>
     </div>
+    <div class="SidebarLayout-Content py-2 px-2 flex-1 flex flex-col gap-2">
+      <div class="SidebarLayout-Item !bg-white">
+        <div class="icon-wrapper">
+          <img
+            class="white-icon"
+            src="@/assets/CarbonHome.png"
+            alt="Dashboard"
+          />
+        </div>
+        <span>Dashboard</span>
+      </div>
+      <div class="SidebarLayout-Item">
+        <div class="icon-wrapper">
+          <img src="@/assets/CarbonHome.png" alt="Routes" />
+        </div>
+        <span>Routes</span>
+      </div>
+      <div class="SidebarLayout-Item">
+        <div class="icon-wrapper">
+          <img src="@/assets/CarbonHome.png" alt="Plans" />
+        </div>
+        <span>Plans</span>
+      </div>
+      <div class="SidebarLayout-Item">
+        <div class="icon-wrapper">
+          <img src="@/assets/CarbonHome.png" alt="Settings" />
+        </div>
+        <span>Settings</span>
+      </div>
+    </div>
+    <div class="SidebarLayout-Bottom bg-white rounded-full flex items-center gap-2 h-[48px] overflow-hidden">
+      <img class="w-12 h-12 mt-1" src="@/assets/user.png" alt="UserAvatar" />
+      <span class="flex-1 truncate op-85">门门满分</span>
+      <img class="w-4 h-4 mr-4" src="@/assets/CarbonOverflowMenuVertical.png" alt="" />
+    </div>
+  </div>
 </template>
 
 <style>
+.SidebarLayout-Item {
+  &:hover {
+    background: #afafaf30
+  }
+  padding: 0.25rem 0.25rem;
 
+  display: flex;
+
+  gap: 0.5rem;
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.SidebarLayout-Item .icon-wrapper {
+  display: flex;
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: black;
+}
+
+.SidebarLayout-Title h1 {
+  font-size: 32px;
+  font-weight: bold;
+  background-image: linear-gradient(
+    90deg,
+    rgba(104, 161, 222, 1) 0%,
+    rgba(63, 217, 206, 0.75) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.SidebarLayout {
+  background: rgba(239, 239, 239, 0.5);
+  backdrop-filter: blur(18px);
+}
+
+/* 
 .SidebarLayout{
     position: fixed;
     display: flex;
@@ -142,5 +193,5 @@
 .icon{
     width: 18px;
     height: 18px;
-}
+} */
 </style>
