@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar.vue'
 <template>
   <div class="HomeView">
     <div class="HomeView-Background"></div>
-    <Navbar />
     <div class="title">
       <div>Explore Your<br>Favorite Journey</div>
     </div>
