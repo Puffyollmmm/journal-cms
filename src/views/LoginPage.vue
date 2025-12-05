@@ -135,7 +135,7 @@
   background-color: #efefef50;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
   .LoginPage-Main {
     width: 820px;
     height: 560px;
