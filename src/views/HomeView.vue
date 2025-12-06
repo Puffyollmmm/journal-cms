@@ -54,8 +54,7 @@ import Navbar from '@/components/Navbar.vue'
 
   transform: translate(-50%, -50%);
   width: 60%;
-/* 
-  border: 1.5px solid rgba(0, 0, 0, 0.2); */
+/* border: 1.5px solid rgba(0, 0, 0, 0.2); */
 
   font-size: 72px;
   font-weight: bold;

@@ -1,6 +1,13 @@
 <script setup>
 // import Sidebar from '@/components/Sidebar.vue';
 import PageSideLayout from '@/components/PageSideLayout.vue';
+import GalleryImage from '@/components/GalleryImage.vue';
+
+import Gallery1 from '@/assets/Gallery/1.png'
+import Gallery2 from '@/assets/Gallery/2.png'
+import Gallery3 from '@/assets/Gallery/3.png'
+import Gallery4 from '@/assets/Gallery/4.png'
+import Gallery5 from '@/assets/Gallery/5.png'
 </script>
 
 <template>
@@ -16,14 +23,15 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
                 <div class="Content-first-title my-2">Gallery</div>
                 <div class="Content-first-container">
                     <div class="Content-first-image">
-                        <img src="@/assets/Gallery/5.png" alt="">
+                        <GalleryImage v-for="item in [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5, Gallery1, Gallery2, Gallery3, Gallery4, Gallery5].reverse()" :src="item" />
+                        <!-- <img src="@/assets/Gallery/5.png" alt="">
                         <img src="@/assets/Gallery/4.png" alt="">
                         <img src="@/assets/Gallery/3.png" alt="">
                         <img src="@/assets/Gallery/2.png" alt="">
                         <img src="@/assets/Gallery/1.png" alt="">
                         <img src="@/assets/Gallery/1.png" alt="">
                         <img src="@/assets/Gallery/2.png" alt="">
-                        <img src="@/assets/Gallery/2.png" alt="">
+                        <img src="@/assets/Gallery/2.png" alt=""> -->
                     </div>
                 </div>
             </div>
@@ -230,13 +238,6 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
     height: 100%;
 
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.75) 20%, #00000000);
-}
-
-.Content-first-image img {
-    border-radius: 28px;
-    border: 1px solid rgba(239, 239, 239, 0.5);
-    opacity: 1;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.125);
 }
 
 /* .Content-first-image::-webkit-scrollbar {
