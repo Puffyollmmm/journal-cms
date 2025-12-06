@@ -131,7 +131,7 @@ import PageSideLayout from '@/components/PageSideLayout.vue';
 
     gap: 1rem;
 
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 .Content-search-box {

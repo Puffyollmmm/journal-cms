@@ -11,7 +11,7 @@ const route = useRoute()
     <div class="top-[2.5%] sticky z-10">
       <Navbar />
     </div>
-    <div class="default-layout-content overflow-y-scroll flex-1">
+    <div class="default-layout-content min-h-full overflow-y-auto flex-1">
       <slot />
 
       <Footer v-if="!route.meta?.fullscreen" />
