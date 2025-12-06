@@ -8,6 +8,58 @@ import Gallery2 from '@/assets/Gallery/2.png'
 import Gallery3 from '@/assets/Gallery/3.png'
 import Gallery4 from '@/assets/Gallery/4.png'
 import Gallery5 from '@/assets/Gallery/5.png'
+
+const GalleryList = [{
+    src: Gallery1,
+    title: '土耳其',
+    score: 4.1,
+    desc: '土耳其是一个国家，也是一个城市，它的城市是土耳其，它的国家是土耳其。'
+}, {
+    src: Gallery2,
+    title: '海南',
+    score: 4.2,
+    desc: '海南是一个国家，也是一个城市，它的城市是海南，它的国家是海南。'
+}, {
+    src: Gallery3,
+    title: '冰岛',
+    score: 4.7,
+    desc: '冰岛是一个国家，也是一个城市，它的城市是冰岛，它的国家是冰岛。'
+}, {
+    src: Gallery4,
+    title: '英国白崖',
+    score: 4.2,
+    desc: '英国白崖是一个国家，也是一个城市，它的城市是英国白崖，它的国家是英国白崖。'
+}, {
+    src: Gallery5,
+    title: '马尔代夫',
+    score: 4.5,
+    desc: '马尔代夫是一个国家，也是一个城市，它的城市是马尔代夫，它的国家是马尔代夫。'
+},{
+    src: Gallery1,
+    title: '土耳其',
+    score: 3.7,
+    desc: '土耳其是一个国家，也是一个城市，它的城市是土耳其，它的国家是土耳其。'
+}, {
+    src: Gallery2,
+    title: '海南',
+    score: 3.1,
+    desc: '海南是一个国家，也是一个城市，它的城市是海南，它的国家是海南。'
+}, {
+    src: Gallery3,
+    title: '冰岛',
+    score: 3.8,
+    desc: '冰岛是一个国家，也是一个城市，它的城市是冰岛，它的国家是冰岛。'
+}, {
+    src: Gallery4,
+    title: '英国白崖',
+    score: 3.1,
+    desc: '英国白崖是一个国家，也是一个城市，它的城市是英国白崖，它的国家是英国白崖。'
+}, {
+    src: Gallery5,
+    title: '马尔代夫',
+    score: 3.8,
+    desc: '马尔代夫是一个国家，也是一个城市，它的城市是马尔代夫，它的国家是马尔代夫。'
+}].reverse()
 </script>
 
 <template>
@@ -23,7 +75,7 @@ import Gallery5 from '@/assets/Gallery/5.png'
                 <div class="Content-first-title my-2">Gallery</div>
                 <div class="Content-first-container">
                     <div class="Content-first-image">
-                        <GalleryImage v-for="item in [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5, Gallery1, Gallery2, Gallery3, Gallery4, Gallery5].reverse()" :src="item" />
+                        <GalleryImage :score="item.score" :desc="item.desc" v-for="item in GalleryList" :key="item.title" :src="item.src" :title="item.title" />
                         <!-- <img src="@/assets/Gallery/5.png" alt="">
                         <img src="@/assets/Gallery/4.png" alt="">
                         <img src="@/assets/Gallery/3.png" alt="">
