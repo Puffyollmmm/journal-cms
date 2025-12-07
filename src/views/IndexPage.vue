@@ -8,7 +8,10 @@ import { ref } from 'vue'
         <div class="IndexPage-Background"></div>
         <div class="IndexPage-Left">
             <div class="IndexPage-Title">探索卡帕多奇亚的天空</div>
-            <div class="IndexPage-Description">Refine Your <br>Hot Air Balloon <br> Journey</div>
+            <div class="IndexPage-Description">Where the Skies<br>Reveal an Ancient<br>Landscape</div>
+            <!-- <div class="IndexPage-Book">
+                <button>订阅行程</button>
+            </div> -->
             <div class="IndexPage-Search">
                 <div>了解更多...</div>
                 <button>搜索</button>
@@ -39,36 +42,36 @@ import { ref } from 'vue'
                     </div>
                 </div>
                 <div class="IndexPage-one-Content">
-                    谷地当第一缕晨光刺破云层，三百只<br>
-                    色彩斑斓的热气球从峡谷间缓缓升起，脚<br>
-                    下是蜂窝状的火山岩，被风雕刻了百万年<br>
-                    的褶皱山峦，是藏在沟壑里的千年石屋，<br>
-                    此刻都成了上帝打翻的调色盘。
+                    谷地当第一缕晨光刺破云层，三百只色彩斑<br>
+                    斓的热气球从峡谷间缓缓升起，脚下是蜂窝<br>
+                    状的火山岩，被风雕刻了百万年的褶皱山峦<br>
+                    ，是藏在沟壑里的千年石屋，此刻都成了上<br>
+                    帝打翻的调色盘。
                 </div>
                 <button>查看攻略</button>
             </div>
             <div class="IndexPage-two">
                 <div class="IndexPage-two-Title">
-                    <div>订阅</div>
+                    <div>开始规划你的旅程</div>
                     <div class="IndexPage-button"><img src="@/assets/CarbonChevronRight.png" alt=""></div>
                 </div>
                 <div class="IndexPage-two-Item">
                     <div class="IndexPage-two-Price">
                         <div>daily</div>
                         <div>
-                            <span>$90</span>/person
+                            <span>$60</span>/person
                         </div>
                     </div>
                     <div class="IndexPage-two-List">
                         <ul>
                             <li>
-                                22 events
+                                Choose Adventure
                             </li>
                             <li>
                                 Special food
                             </li>
                             <li>
-                                Tracking videos
+                                Solo & Group Trips
                             </li>
                         </ul>
                     </div>
@@ -120,11 +123,37 @@ import { ref } from 'vue'
 }
 
 .IndexPage-Description{
-    font-size: 58px;          /* 稍微小一点更高级 */
+    font-size: 54px;          /* 稍微小一点更高级 */
     font-weight: 620;
     color: #ffffff;
     line-height: 1.5;        /* 超重要：紧凑的行高 */
     letter-spacing: -1px;
+}
+
+.IndexPage-Book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 22px;
+    padding: 3px;
+    backdrop-filter: blur(18px);
+}
+
+.IndexPage-Book button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* 鼠标移入变亮 */
+}
+
+.IndexPage-Book button{
+    font-size: 20px;
+    font-weight: medium;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000000;
+    border: none;
+    border-radius: 22px;
+    padding: 10px 55px 10px 55px;
+    backdrop-filter: blur(18px);
 }
 
 .IndexPage-Search{
@@ -275,7 +304,7 @@ import { ref } from 'vue'
 .IndexPage-two-Title{
     background-color: #ffffff;
     padding: 2px 16px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     font-family: '微软雅黑';
     color:rgba(56, 56, 56, 1);
@@ -296,6 +325,11 @@ import { ref } from 'vue'
     font-size: 28px;
     font-weight: medium;
     color: rgba(0, 186, 171, 1);
+}
+
+.IndexPage-two-List{
+    font-size: 14px;
+
 }
 
 .IndexPage-two-Item{

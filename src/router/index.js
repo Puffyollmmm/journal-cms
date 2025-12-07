@@ -30,6 +30,34 @@ const router = createRouter({
       meta: {
         fullscreen: true
       }
+    },{
+      path: '/index',
+      name: 'Index',
+      component: IndexPage,
+      meta: {
+        fullscreen: true
+      }
+    },{
+      path: '/indexSecond',
+      name: 'IndexSecond',
+      component: IndexPagesecond,
+      meta: {
+        fullscreen: true
+      }
+    },{
+      path: '/hotel',
+      name: 'Hotel',
+      component: Hotel,
+      meta: {
+        fullscreen: true
+      }
+    },{
+      path: '/hotelSecond',
+      name: 'HotelSecond',
+      component: HotelSecond,
+      meta: {
+        fullscreen: true
+      }
     },
     {
       path: '/about',

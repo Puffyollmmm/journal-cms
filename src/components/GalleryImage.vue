@@ -7,8 +7,8 @@ const props = defineProps(['src', 'title', 'desc', 'score'])
     <img class="GalleryImage-Main" :src="src" alt="">
     <div class="GalleryImage-Content flex items-center px-3 py-1 rounded-[18px] absolute bottom-4 bg-white/50 w-[90%] left-[5%] h-12">
       <div class="w-[80%]">
-        <p class="text-[14px] text-black font-medium">{{ title }}</p>
-        <p class="w-full truncate line-clamp-1 text-[12px]">{{ desc }}</p>
+        <p class="text-[14px] text-[#181818] font-medium">{{ title }}</p>
+        <p class="w-full truncate line-clamp-1 text-[9px] text-[#282828]">{{ desc }}</p>
       </div>
       <div class="w-[20%] gap-1 text-black flex-row-reverse text-[12px] flex justify-end items-center">
         <span>{{ score }}</span>

@@ -8,58 +8,148 @@ import Gallery2 from '@/assets/Gallery/2.png'
 import Gallery3 from '@/assets/Gallery/3.png'
 import Gallery4 from '@/assets/Gallery/4.png'
 import Gallery5 from '@/assets/Gallery/5.png'
+import Gallery6 from '@/assets/Gallery/6.png'
+import Gallery7 from '@/assets/Gallery/7.png'
+import Gallery8 from '@/assets/Gallery/8.png'
+import Gallery9 from '@/assets/Gallery/9.png'
+import Gallery10 from '@/assets/Gallery/10.png'
+import Gallery11 from '@/assets/Gallery/11.png'
+import Gallery12 from '@/assets/Gallery/12.png'
+import Gallery13 from '@/assets/Gallery/13.png'
+import Gallery14 from '@/assets/Gallery/14.png'
+import Gallery15 from '@/assets/Gallery/15.png'
+import Gallery16 from '@/assets/Gallery/16.png'
+import Gallery17 from '@/assets/Gallery/17.png'
+import Gallery18 from '@/assets/Gallery/18.png'
+import Gallery19 from '@/assets/Gallery/19.png'
+import Gallery20 from '@/assets/Gallery/20.png'
+import Gallery21 from '@/assets/Gallery/21.png'
+import Gallery22 from '@/assets/Gallery/22.png'
+import Gallery23 from '@/assets/Gallery/23.png'
 
 const GalleryList = [{
     src: Gallery1,
     title: '土耳其',
     score: 4.1,
-    desc: '土耳其是一个国家，也是一个城市，它的城市是土耳其，它的国家是土耳其。'
+    desc: '卡帕多奇亚的热气球上，仿佛触摸到了天空的温柔与自由。'
 }, {
     src: Gallery2,
-    title: '海南',
+    title: '美国加州',
     score: 4.2,
-    desc: '海南是一个国家，也是一个城市，它的城市是海南，它的国家是海南。'
+    desc: '阳光、海浪与梦想，加州等你来探索。'
 }, {
     src: Gallery3,
-    title: '冰岛',
+    title: '巴西里约热内卢',
     score: 4.7,
-    desc: '冰岛是一个国家，也是一个城市，它的城市是冰岛，它的国家是冰岛。'
+    desc: '激情桑巴与山海奇观，里约点燃你的灵魂。'
 }, {
     src: Gallery4,
-    title: '英国白崖',
+    title: '英国伦敦',
     score: 4.2,
-    desc: '英国白崖是一个国家，也是一个城市，它的城市是英国白崖，它的国家是英国白崖。'
+    desc: '穿越古典与现代，伦敦的故事每一刻都在上演。'
 }, {
     src: Gallery5,
-    title: '马尔代夫',
+    title: '中国海南',
     score: 4.5,
-    desc: '马尔代夫是一个国家，也是一个城市，它的城市是马尔代夫，它的国家是马尔代夫。'
+    desc: '自由自在自贸港，海风海韵海南岛。'
 },{
-    src: Gallery1,
-    title: '土耳其',
+    src: Gallery6,
+    title: '马达加斯加',
     score: 3.7,
-    desc: '土耳其是一个国家，也是一个城市，它的城市是土耳其，它的国家是土耳其。'
+    desc: '探秘原始岛屿，邂逅独一无二的生灵。'
 }, {
-    src: Gallery2,
-    title: '海南',
+    src: Gallery7,
+    title: '奥地利哈尔施塔特',
     score: 3.1,
-    desc: '海南是一个国家，也是一个城市，它的城市是海南，它的国家是海南。'
+    desc: '湖畔童话小镇，哈尔施塔特宛如仙境落人间。'
 }, {
-    src: Gallery3,
+    src: Gallery8,
     title: '冰岛',
     score: 3.8,
-    desc: '冰岛是一个国家，也是一个城市，它的城市是冰岛，它的国家是冰岛。'
+    desc: '宇宙级的浪漫之舞，在世界尽头等你共赴梦幻之约。'
 }, {
-    src: Gallery4,
-    title: '英国白崖',
+    src: Gallery9,
+    title: '德国慕尼黑',
     score: 3.1,
-    desc: '英国白崖是一个国家，也是一个城市，它的城市是英国白崖，它的国家是英国白崖。'
+    desc: '啤酒节的欢腾，历史与现代的巴伐利亚交响。'
 }, {
-    src: Gallery5,
+    src: Gallery10,
+    title: '印尼巴厘岛',
+    score: 3.8,
+    desc: '神灵之岛，巴厘岛用海浪、神庙与spa治愈身心。'
+},{
+    src: Gallery11,
+    title: '意大利多洛米蒂',
+    score: 3.7,
+    desc: '巍峨白云岩，意大利阿尔卑斯的户外天堂。'
+}, {
+    src: Gallery12,
+    title: '捷克布拉格',
+    score: 3.1,
+    desc: '漫步千塔之城，布拉格将童话照进现实。'
+}, {
+    src: Gallery13,
+    title: '英国白崖',
+    score: 3.8,
+    desc: '吹着白垩纪的风，遥望对面的法国，感受时间的印记与生命的坚韧。'
+}, {
+    src: Gallery14,
+    title: '冰岛极光',
+    score: 3.1,
+    desc: '冰岛极光，神秘的自然之美。'
+}, {
+    src: Gallery15,
+    title: '西班牙马略卡岛',
+    score: 3.8,
+    desc: '地中海蓝与古城风情，马略卡让你沉醉不归。'
+},{
+    src: Gallery16,
+    title: '澳大利亚澳洲',
+    score: 3.8,
+    desc: '邂逅梦幻粉红湖，澳大利亚赠你一场浪漫奇境。'
+},{
+    src: Gallery17,
+    title: '瑞典',
+    score: 3.8,
+    desc: '简约设计与自然奇观，瑞典唤醒你的北欧之心。'
+},{
+    src: Gallery18,
     title: '马尔代夫',
     score: 3.8,
-    desc: '马尔代夫是一个国家，也是一个城市，它的城市是马尔代夫，它的国家是马尔代夫。'
-}].reverse()
+    desc: '踏碎珊瑚海的波光，赴一场与星辰大海的约会。'
+},{
+    src: Gallery19,
+    title: '中国玉龙拉措',
+    score: 3.8,
+    desc: '雪山圣湖相映，玉龙拉措是藏于川西的秘境眼泪。'
+},{
+    src: Gallery20,
+    title: '印尼火山',
+    score: 3.8,
+    desc: '穿越云海日出，Bromo 火山仿佛通往异星之境。'
+},{
+    src: Gallery21,
+    title: '新西兰',
+    score: 3.8,
+    desc: '纯净中土世界，冒险与宁静在此共存。'
+},{
+    src: Gallery22,
+    title: '瑞士卢塞恩湖',
+    score: 3.8,
+    desc: '湖光山色如诗，卢塞恩湖是瑞士的蓝宝石'
+},{
+    src: Gallery23,
+    title: '瑞士瑞吉山',
+    score: 3.8,
+    desc: '登顶瑞吉山，俯瞰阿尔卑斯的史诗画卷。'
+}]
+
+function handleClick(item, index) {
+    if (index === 0) {
+    location.replace('/index')
+}
+}
+
 </script>
 
 <template>
@@ -70,12 +160,12 @@ const GalleryList = [{
             </div>
         </template>
 
-        <div class="Content pt-[158px] px-4">
+        <div class="Content pt-[158px] px-16">
             <div class="Content-first my-4">
                 <div class="Content-first-title my-2">Gallery</div>
                 <div class="Content-first-container">
                     <div class="Content-first-image">
-                        <GalleryImage :score="item.score" :desc="item.desc" v-for="item in GalleryList" :key="item.title" :src="item.src" :title="item.title" />
+                        <GalleryImage @click="handleClick(item, index)" :score="item.score" :desc="item.desc" v-for="(item, index) in GalleryList" :key="item.title" :src="item.src" :title="item.title" />
                         <!-- <img src="@/assets/Gallery/5.png" alt="">
                         <img src="@/assets/Gallery/4.png" alt="">
                         <img src="@/assets/Gallery/3.png" alt="">
